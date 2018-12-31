@@ -13,4 +13,5 @@ This repository provides a simple PHP script for sending SMS messages using the 
 ```bash 
   git clone https://github.com/yourusername/netgsm-php-sms.git
   cd netgsm-php-sms
+  php netgsm.php
   ```
