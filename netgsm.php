@@ -19,4 +19,6 @@ $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
 //you can track response or http code :) for check :P
 
+// close cURL resource, and free up system resources
+curl_close($ch);
 ?>
