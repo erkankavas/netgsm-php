@@ -1,24 +1,25 @@
 <?php
+// Netgsm Turkish VoIP/SMS Operator
 
-//netgsm turkish voip sms operator - php api by ERKANKAVAS 2023 :P
-//have a question please contact @erkankavas in twitter :P
+$username = "850xxxxxxxxxx"; // Telephone number
+$password = urlencode("xxxxxxxxxx"); // Password as API key
 
-$username = "850xxxxxxxxxx"; // tel number
-$password = urlencode("xxxxxxxxxx"); // pass api key
+$tel = "5xxxxxxxxx"; // Recipient phone number
+$mes = "merhaba!"; // Message content
 
-$tel = "5xxxxxxxxx"; //who you wanna send sms :)
-$mes = "merhaba!"; // message you wanna send.
-      
-$url= "https://api.netgsm.com.tr/sms/send/get/?usercode=".$username."&password=".$password."&gsmno=".$tel."&message=".$mes."&msgheader=".$username;
+$url = "https://api.netgsm.com.tr/sms/send/get/?usercode=" . $username . "&password=" . $password . "&gsmno=" . $tel . "&message=" . urlencode($mes) . "&msgheader=" . $username;
 
 $ch = curl_init($url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $http_response = curl_exec($ch);
 $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-//you can track response or http code :) for check :P
+// You can track response or HTTP code for verification
 
-// close cURL resource, and free up system resources
+// Close cURL resource and free up system resources
 curl_close($ch);
+
+echo "Response: " . $http_response . "\n";
+echo "HTTP Code: " . $http_code . "\n";
 ?>

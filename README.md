@@ -1,6 +1,16 @@
-# netgsm-php
+# Netgsm Turkish VoIP/SMS Operator
 
-netgsm php api - curl
-dont forget the change credentials.
-netgsm is the turkish voip/sms operator
-have a question please contact @erkankavas in twitter
+This repository provides a simple PHP script for sending SMS messages using the Netgsm Turkish VoIP SMS service.
+
+## Features
+
+- Send SMS messages through Netgsm's API.
+- Simple and easy-to-use script.
+- Customizable phone numbers and message content.
+
+## Usage 
+
+```bash 
+  git clone https://github.com/yourusername/netgsm-php-sms.git
+  cd netgsm-php-sms
+  ```
